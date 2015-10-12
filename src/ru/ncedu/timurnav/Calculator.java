@@ -13,7 +13,7 @@ public class Calculator {
             if (n1==0) n1 = giveMeNumber();
             o = giveMeOperation();
             if (o instanceof UnaryOperation){
-                res = o.execute(n1, 0);
+                res = ((UnaryOperation)o).execute(n1);
             }
             else res = o.execute(n1, giveMeNumber());
             n1=0;
